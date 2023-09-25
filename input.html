@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Form</title>
+    <!-- Include Bootstrap CSS via CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form id="inputForm">
+        <div class="mb-3">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstName" required />
+        </div>
+        <div class="mb-3">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastName" required />
+        </div>
+        <div class="mb-3">
+          <label for="date" class="form-label"
+            >Date (European Format: DD/MM/YYYY)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="date"
+            placeholder="DD/MM/YYYY"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="time" class="form-label"
+            >Time (European Format: HH:MM AM/PM)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="time"
+            placeholder="HH:MM AM/PM"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <!-- Include Bootstrap JavaScript via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("inputForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form values
+          const firstName = document.getElementById("firstName").value;
+          const lastName = document.getElementById("lastName").value;
+          const date = document.getElementById("date").value;
+          const time = document.getElementById("time").value;
+
+          // Create JSON object
+          const data = {
+            firstName: firstName,
+            lastName: lastName,
+            date: date,
+            time: time,
+          };
+
+          // Redirect to data.html and pass JSON data as a query parameter
+          window.location.href = `data.html?data=${JSON.stringify(data)}`;
+        });
+    </script>
+  </body>
+</html>

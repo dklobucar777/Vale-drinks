@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Unos podataka</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Unos podataka</h1>
+
+      <form action="podaci.html" method="post">
+        <div class="form-group">
+          <label for="ime">Ime:</label>
+          <input type="text" class="form-control" id="ime" name="ime" />
+        </div>
+        <div class="form-group">
+          <label for="prezime">Prezime:</label>
+          <input type="text" class="form-control" id="prezime" name="prezime" />
+        </div>
+        <div class="form-group">
+          <label for="datum">Datum:</label>
+          <input type="date" class="form-control" id="datum" name="datum" />
+        </div>
+        <div class="form-group">
+          <label for="vrijeme">Vrijeme:</label>
+          <input type="time" class="form-control" id="vrijeme" name="vrijeme" />
+        </div>
+        <button type="submit" class="btn btn-primary">Pošalji</button>
+      </form>
+    </div>
+
+    <!-- JavaScript kod za dohvat podataka iz forme i prebacivanje na podaci.html -->
+    <script>
+      // Dohvat podataka iz forme
+      const ime = document.querySelector("#ime").value;
+      const prezime = document.querySelector("#prezime").value;
+      const datum = document.querySelector("#datum").value;
+      const vrijeme = document.querySelector("#vrijeme").value;
+
+      // Kreiraj objekt podataka
+      const podaci = {
+        ime,
+        prezime,
+        datum,
+        vrijeme,
+      };
+
+      // Prebaci objekt podataka na podaci.html
+      const e = document
+        .querySelector("form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          window.location.href =
+            "podaci.html?" + new URLSearchParams(podaci).toString();
+        });
+    </script>
+  </body>
+</html>

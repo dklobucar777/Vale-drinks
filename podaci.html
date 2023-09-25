@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Podaci</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <h1>Podaci</h1>
+
+    <!-- JavaScript kod za dohvat podataka iz query stringa -->
+    <script>
+      // Dohvat podataka iz query stringa
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // Dohvat ime, prezimena, datuma i vremena
+      const ime = urlParams.get("ime");
+      const prezime = urlParams.get("prezime");
+      const datum = urlParams.get("datum");
+      const vrijeme = urlParams

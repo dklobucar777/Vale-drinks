@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check and Change Input Value</title>
+  </head>
+  <body>
+    <label for="firstName" class="form-label">Naziv firme</label>
+    <input
+      type="text"
+      class="form-control"
+      id="naziv-firme"
+      placeholder=""
+      value=""
+      required=""
+    />
+
+    <script>
+      // Function to check and change input value
+      function checkAndChangeValue() {
+        // Get a reference to the input element by its ID
+        var inputElement = document.getElementById("naziv-firme");
+
+        // Check if the input element exists
+        if (inputElement) {
+          // Check if the current value is "jedan"
+          if (inputElement.value === "jedan") {
+            // Change the value to "dva"
+            inputElement.value = "dva";
+          }
+        }
+      }
+
+      // Set up a repeating interval to check every 2 seconds
+      setInterval(checkAndChangeValue, 2000);
+    </script>
+  </body>
+</html>
