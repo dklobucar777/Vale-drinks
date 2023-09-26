@@ -210,11 +210,10 @@
               <thead>
                 <tr>
                   <th class="col-1">ID</th>
-                  <th class="col-3">Naziv Artikla</th>
-                  <th class="col-2">Pakiranje (l)</th>
+                  <th class="col-6">Naziv Artikla</th>
                   <th class="col-2">Količina</th>
                   <th class="col-2">Cijena <i class="fas fa-euro-sign"></i></th>
-                  <th class="col-2">Uređivanje</th>
+                  <th class="col-1"></th>
                 </tr>
               </thead>
               <tbody>
@@ -229,18 +228,6 @@
                       list="list-products"
                       id="nazivArtikla"
                     />
-                  </td>
-                  <!--PAKIRANJE-->
-                  <td>
-                    <select
-                      class="form-control form-select"
-                      aria-label="Large select example"
-                      id="pakiranje"
-                    >
-                      <option selected></option>
-                      <option value="1">1.0</option>
-                      <option value="2">0.7</option>
-                    </select>
                   </td>
                   <!--KOLIČINA-->
                   <td>
@@ -315,18 +302,14 @@
       </datalist>
       <!--LISTA PRODUKTA-->
       <datalist id="list-products">
-        <option>Jagermeister</option>
-        <option>Becherovka</option>
-        <option>Chivas Regal</option>
-        <option>Johnnie Walker</option>
-        <option>Pelinkovac</option>
-        <option>Šljivovica</option>
-        <option>Jack Daniels</option>
-      </datalist>
-      <!--LISTA PAKIRANJA-->
-      <datalist id="list-package">
-        <option>1.0</option>
-        <option>0.7</option>
+        <option>JAGERMEISTER 0.02 l 96/1</option>
+        <option>JAGERMEISTER 0.10 l 12/1</option>
+        <option>JAGERMEISTER 0.70 l 6/1</option>
+        <option>JAGERMEISTER 1.00 l 6/1</option>
+        <option>AMARO MONTENEGRO 0.70 l 6/1</option>
+        <option>CYNAR 1.0 l 6/1</option>
+        <option>BECHEROVKA 0.07 l 6/1</option>
+        <option>JOHNNIE WALKER WHISKY 1.00 l 6/1</option>
       </datalist>
       <!--LISTA KLIJENTA-->
       <datalist id="list-clients">
