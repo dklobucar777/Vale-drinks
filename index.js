@@ -15,18 +15,6 @@ $(document).ready(function () {
                         list="list-products"
                         id="naziv artikla" />
                     </td>
-            //PAKIRANJE
-                    <td>
-                        <select
-                            class="form-control form-select"
-                            aria-label="Large select example"
-                            id="pakiranje"
-                            >
-                            <option selected></option>
-                            <option value="1">1.0</option>
-                            <option value="2">0.7</option>
-                        </select>
-                    </td>
             //KOLIČINA
                     <td>
                     <input type="number" class="form-control" id="quantity" />
